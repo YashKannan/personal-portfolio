@@ -1,0 +1,91 @@
+.skills-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.skills-container h1 {
+    font-size: 2.5em;
+    color: #ffff00;
+    margin-bottom: 30px;
+}
+
+.skills-slider {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.skill-item {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    animation: slide 10s linear infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-item img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.skill-item p {
+    font-size: 20px;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.skill-info {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.skill-info p {
+    font-size: 14px;
+    color: #ffffff;
+    margin: 0;
+}
+
+.skill-item:hover {
+    transform: scale(1.05);
+}
+
+.skill-item:hover img {
+    transform: translateY(-20px);
+}
+
+.skill-item:hover > p {
+    opacity: 0;
+}
+
+.skill-item:hover .skill-info {
+    bottom: 0;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.skills-slider:hover .skill-item {
+    animation-play-state: paused;
+}

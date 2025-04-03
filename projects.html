@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Yash Kannan KK</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="name">Yash Kannan KK</div>
+        <div class="nav-links">
+            <div class="nav-links-left">
+                <a href="mainpage.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="skills.html">Skills</a>
+                <a href="certifications.html">Certifications</a>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Contact Info</button>
+                <div class="dropdown-content">
+                    <a href="tel:+917305395347">Phone: +91 7305395347</a>
+                    <a href="mailto:y.ash2006.kk@gmail.com">Email: y.ash2006.kk@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="projects-container">
+        <div class="slide active">
+            <h2>AI Powered Traffic Management System using YOLO,DeepSORT and OpenCV</h2>
+                <p><strong>Accurately detect and classify</strong> different types of vehicles (cars, buses, trucks, etc.) and pedestrians using deep learning models. Also to integrate cross-domain detection.</p>
+                <p><strong>Track the movement</strong> of detected objects using DeepSORT for efficient multi-object tracking.</p>
+                <p><strong>Estimate speed and direction</strong> of vehicles to analyze traffic flow and potential safety risks.</p>
+                <p><strong>Enhance traffic monitoring</strong> by providing real-time insights for road safety and congestion management.</p>
+                <p><strong>Enable data-driven decision-making</strong> for smart city applications, traffic control systems, and accident prevention.</p>
+        </div>
+        <div class="slide">
+            <h2>Tennis AI and ML System using keypoint detection for match analysis</h2>
+                <p><strong>Accurately detect and track</strong> tennis balls in real-time using keypoint detection techniques.</p>
+                <p><strong>Analyze player movements</strong> by detecting keypoints on the body to study posture, strokes, and gameplay efficiency.</p>
+                <p><strong>Track ball trajectory</strong> to calculate speed, direction, and bounce points for enhanced game analysis.</p>
+                <p><strong>Provide real-time feedback</strong> to players and coaches for improving performance and strategy.</p>
+                <p><strong>Enable data-driven insights</strong> for training sessions, match analysis, and sports analytics applications.</p>          
+        </div>
+        <div class="slide">
+            <h2>Personal Portfolio Website</h2>
+            <p><strong>Showcase your skills and projects</strong> through a visually appealing and interactive personal portfolio website.</p>
+            <p><strong>Responsive design</strong> ensures the website looks great on all devices, including desktops, tablets, and mobile phones.</p>
+            <p><strong>Dynamic features</strong> include a slideshow for projects, a terminal-themed design for coding-related sections, and smooth animations for enhanced user experience.</p>
+            <p><strong>Consistent theme</strong> with a dark background, yellow highlights, and clean typography to create a professional and modern look.</p>
+             <p><strong>User-friendly navigation</strong> with a top bar that links to key sections like "About Me," "Projects," and "Reviews."</p>
+        </div>
+        <button class="arrow left-arrow">&#10094;</button>
+        <button class="arrow right-arrow">&#10095;</button>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const slides = document.querySelectorAll(".slide");
+            const leftArrow = document.querySelector(".left-arrow");
+            const rightArrow = document.querySelector(".right-arrow");
+            
+            let currentSlide = 0;
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.remove("active");
+                    if (i === index) {
+                        slide.classList.add("active");
+                    }
+                });
+            }
+            leftArrow.addEventListener("click", () => {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(currentSlide);
+            });
+            rightArrow.addEventListener("click", () => {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            });
+            showSlide(currentSlide);
+        });
+    </script>
+    <div id="vanta-bg" style="position:absolute; top:0; left:0; width:100%; height:100vh; z-index:-1;"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+    <script>
+        VANTA.WAVES({
+            el: "#vanta-bg",
+            color: 0x001f3f, // Navy blue
+            shininess: 50,
+            waveHeight: 20,
+            waveSpeed: 1,
+            zoom: 0.75
+        });
+    </script>
+</body>
+</html>

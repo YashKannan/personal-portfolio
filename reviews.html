@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - Yash Kannan KK</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="reviews.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="name">Yash Kannan KK</div>
+        <div class="nav-links">
+            <div class="nav-links-left">
+                <a href="mainpage.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="projects.html">Projects</a>
+                <a href="skills.html">Skills</a>
+                <a href="certifications.html">Certifications</a>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Contact Info</button>
+                <div class="dropdown-content">
+                    <a href="tel:+917305395347">Phone: +91 7305395347</a>
+                    <a href="mailto:y.ash2006.kk@gmail.com">Email: y.ash2006.kk@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="reviews-container">
+        <h1>Leave a Review</h1>
+        <form class="review-form" action="#" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="review">Review:</label>
+            <textarea id="review" name="review" rows="5" placeholder="Write your review here..." required></textarea>
+
+            <button type="submit">Submit Review</button>
+        </form>
+
+        <div class="submitted-reviews">
+            <h2>What Others Are Saying:</h2>
+            <p><strong>John Doe:</strong> This portfolio is amazing! I love the design and functionality.</p>
+            <p><strong>Jane Smith:</strong> Great work! The terminal theme is very unique and creative.</p>
+        </div>
+    </div>
+    <div id="vanta-bg" style="position:absolute; top:0; left:0; width:100%; height:100vh; z-index:-1;"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+    <script>
+        VANTA.WAVES({
+            el: "#vanta-bg",
+            color: 0x001f3f, // Navy blue
+            shininess: 50,
+            waveHeight: 20,
+            waveSpeed: 1,
+            zoom: 0.75
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #0a1622;
+    color: white;
+}
+
+.reviews-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #000000;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.reviews-container h1 {
+    color: #ffff00;
+    text-align: center;
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.review-form label {
+    margin-top: 15px;
+    font-size: 1.2em;
+}
+
+.review-form input,
+.review-form textarea {
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.review-form input {
+    height: 40px;
+}
+
+.review-form textarea {
+    resize: none;
+}
+
+.review-form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ffff00;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.review-form button:hover {
+    background-color: #ffd700;
+}
+
+.submitted-reviews {
+    margin-top: 30px;
+}
+
+.submitted-reviews h2 {
+    color: #ffff00;
+}
+
+.submitted-reviews p {
+    margin-bottom: 15px;
+}
